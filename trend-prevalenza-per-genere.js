@@ -1,4 +1,4 @@
-function estraiTotale(colonna, sesso = 'Maschi'){
+function estraiTotale(anni,colonna, sesso = 'Maschi'){
   let dataset = null;
   let somma = 0;
   let container = {};
@@ -19,7 +19,7 @@ function estraiTotale(colonna, sesso = 'Maschi'){
   return container;
 }
 
-function calcoloWi(){
+function calcoloWi(anni){
   let container = estraiTotale('peso_classe');
   let dataset = [];
   let div = 0;
@@ -40,7 +40,7 @@ function calcoloWi(){
   return container;
 }
 
-function tassoStandard(k = 1000, sesso = 'Maschi'){
+function tassoStandard(anni,k = 1000, sesso = 'Maschi'){
   let dataset = null;
   let wi = calcoloWi();
   let ti = 0;
@@ -93,7 +93,7 @@ function tassoStandard(k = 1000, sesso = 'Maschi'){
   return tassi;
 }
 
-function tassoGrezzo(k = 1000, sesso = 'Maschi') {
+function tassoGrezzo(anni,k = 1000, sesso = 'Maschi') {
   let casi = estraiTotale('casi', sesso);
   let popolazione = estraiTotale('popolazione', sesso);
   let tasso = {};
@@ -108,7 +108,7 @@ function tassoGrezzo(k = 1000, sesso = 'Maschi') {
   return tasso;
 }
 
-function intervalloTg(sesso = 'Maschi') {
+function intervalloTg(anni,sesso = 'Maschi') {
   let tassi = tassoGrezzo(1, sesso);
   let popolazione = estraiTotale('popolazione', sesso);
   let sqrt = 0;
@@ -129,7 +129,7 @@ function intervalloTg(sesso = 'Maschi') {
   return container;
 }
 
-function calcoloEsLogTs(sesso = 'Maschi'){
+function calcoloEsLogTs(anni,sesso = 'Maschi'){
   let dataset = null;
   let wi = calcoloWi();
   let tassi = tassoStandard(1, sesso);
@@ -153,7 +153,7 @@ function calcoloEsLogTs(sesso = 'Maschi'){
   return es;
 }
 
-function intervalloTs(sesso = 'Maschi') {
+function intervalloTs(anni,sesso = 'Maschi') {
   let tassi = tassoStandard(1, sesso);
   let esLog = calcoloEsLogTs(sesso);
   let container = {};
