@@ -75,6 +75,7 @@ span.multiselect-native-select select {
 .multiselect-container .multiselect-filter > .bi-search {
   z-index: 1;
   padding-left: 0.75rem;
+  font-size: 2rem;
 }
 .multiselect-container .multiselect-filter > input.multiselect-search {
   border: none;
