@@ -72,7 +72,7 @@ span.multiselect-native-select select {
 .multiselect-container .multiselect-reset .input-group {
   width: 93%;
 }
-.multiselect-container .multiselect-filter > .fa-search {
+.multiselect-container .multiselect-filter > .bi-search {
   z-index: 1;
   padding-left: 0.75rem;
 }
