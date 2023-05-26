@@ -1187,7 +1187,7 @@
                     else {
                         // Firefox does not support a clear button in search inputs right now therefore it must be added manually
                         if (this.isFirefox() && this.$filter.find(".multiselect-clear-filter").length === 0) {
-                            this.$filter.append("<i class='fas fa-times text-muted multiselect-clear-filter multiselect-moz-clear-filter'></i>");
+                            this.$filter.append("<i class='bi bi-times text-muted multiselect-clear-filter multiselect-moz-clear-filter'></i>");
                         }
 
                         this.$filter.find(".multiselect-clear-filter").on('click', $.proxy(function (event) {
