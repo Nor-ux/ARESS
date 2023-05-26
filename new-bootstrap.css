@@ -84,7 +84,7 @@ span.multiselect-native-select select {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.multiselect-container .multiselect-filter > input.multiselect-search.form-control {
+.multiselect-container .multiselect-filter > input.form-control {
   margin: 0.3rem;
 }
 .multiselect-container .multiselect-filter > input.multiselect-search:focus {
