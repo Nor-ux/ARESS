@@ -162,7 +162,7 @@ function calcoloEsLogTs(dataset, anni, gruppoEta, classiEta) {
   anni.forEach((el) => {
     es[el] = {};
     gruppoEta.forEach((eta) => {
-      datatemp = data.filter((d) => d.anno === el && d.gruppo === eta);
+      datatemp = dataset.filter((d) => d.anno === el && d.gruppo === eta);
       sommatoria = 0;
       datatemp.forEach((riga) => {
         valore = riga.casi / Math.pow(riga.popolazione, 2);
